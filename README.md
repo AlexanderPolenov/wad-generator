@@ -10,6 +10,7 @@ Wad Generator is a Node.js-based library for the construction of maps for classi
 npm init
 ```
 then follow prompts. At the end the `package.json` file will appear in your folder.
+
 4. Install Wad Generator into your project:
 ```
 npm install wad-generator
