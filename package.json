@@ -1,0 +1,21 @@
+{
+    "name": "wad-generator",
+    "version": "1.0.0",
+    "description": "Node.js based builder for procedural .wad generation.",
+    "type": "module",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "wad",
+        "doom",
+        "classic doom"
+    ],
+    "author": "Alexander Polenov",
+    "license": "MIT",
+    "exports": {
+        ".": "./index.js",
+        "./utils": "./mainObjects/utils.js"
+    }
+}
