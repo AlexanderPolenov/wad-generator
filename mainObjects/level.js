@@ -121,6 +121,7 @@ export default class Level {
     placeThing(x, y, type, angle) {
         const thing = new Thing(this.things.length, x, y, type, angle);
         this.things.push(thing);
+        return thing;
     }
 
     placeFloatingTexture(from, to, sectorIdx, lineParams = {}, texture) {
@@ -137,6 +138,22 @@ export default class Level {
         linedef.front.middle = texture;
         linedef.back.middle = texture;
         return linedef;
+    }
+
+    getVertexByIdx(idx) {
+        return this.vertices.find((v) => v.idx === idx);
+    }
+
+    getLinedefByIdx(idx) {
+        return this.linedefs.find((l) => l.idx === idx);
+    }
+
+    getSectorByIdx(idx) {
+        return this.sectors.find((s) => s.idx === idx);
+    }
+
+    getThingByIdx(idx) {
+        return this.things.find((t) => t.idx === idx);
     }
 
     _getOrCreateVertex(x, y) {
