@@ -85,7 +85,7 @@ const config = {
 
 
 ## Level
-`Level` object exposes just 4 methods necessary for building your level.
+`Level` object exposes just 4 methods necessary for building your level plus some utility methods.
 
 ### buildSector
 `buildSector` essentially builds the sector from provided array of dots. It returns the package `{vertices, linedefs, sector}` that contains all generated vertices, linedefs and sector for possible post-processing, if required (uncommon, but here you have it).
@@ -266,6 +266,16 @@ function buildRoom1(level, x, y) {
     );
 }
 ```
+
+### Utility methods of the level instance
+
+`getVertexByIdx(idx)` - returns the Vertex instance by its number.
+
+`getLinedefByIdx(idx)` - returns the Linedef instance by its number.
+
+`getSectorByIdx(idx)` - returns the Sector instance by its number.
+
+`getThingByIdx(idx)` - returns the Thing instance by its number.
 
 ## Misc
 `utils.js` have some useful helpers to make your scripts shorter when applicable. There are no prefabs and geometry shape generators though, create your own when practical.
